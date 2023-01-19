@@ -1,0 +1,77 @@
+<!-- carousel -->
+<mat-grid-list cols="10" gutterSize="0" rowHeight="20">
+  <mat-grid-tile [colspan]="1" [rowspan]="18">
+    <button mat-icon-button color="accent" class="control prev" (click)="onPreviousClick()">
+      <!-- <span class="arrow left"></span> -->
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="8" [rowspan]="18">
+    <ng-container *ngFor="let slide of slides; let i = index">
+      <div class="flip-card" *ngIf="i === currentSlide" @carouselAnimation>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+
+            <mat-card class="card">
+              <div *ngIf="i === 0" class="ribbon-purple"><span>Near you</span>
+              </div>
+              <div *ngIf="i === 1" class="ribbon-pink"><span>Best rate</span>
+              </div>
+              <div *ngIf="i === 2" class="ribbon-charcoal"><span>Lowest fees</span>
+              </div>
+              <mat-card-title>
+                <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                  <mat-grid-tile [colspan]="10" [rowspan]="2">
+                    <div class="card-title">{{slide.title}}</div>
+                  </mat-grid-tile>
+                </mat-grid-list>
+                <!-- <div><mat-checkbox></mat-checkbox></div>
+      <div>Commonwealth Credit Union</div> -->
+              </mat-card-title>
+
+              <div class="image-container">
+                <img [src]="slide.src" width="70%" max-height="100px">
+              </div>
+
+            </mat-card>
+          </div>
+          <div class="flip-card-back">
+            <mat-card class="card">
+              <div class="description-parent">
+                <div [innerHTML]="slide.description"></div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="18">
+    <button mat-icon-button color="accent" class="control next" (click)="onNextClick()">
+      <!-- <span class="arrow right"></span> -->
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+
+
+
+
+
+
+
+
+<!-- 
+<mat-card>
+  <mat-card-title>
+    <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+
+      <mat-grid-tile [colspan]="9" [rowspan]="2">
+        <div class="card-title">Commonwealth Credit Union</div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-title>
+</mat-card> -->

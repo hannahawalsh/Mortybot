@@ -1,0 +1,76 @@
+<mat-sidenav-container class="uxg-nav">
+    <mat-sidenav #sidenav mode="over" position="start">
+        <div class="uxg-nav-header">
+            <div class="uxg-logo"></div>
+        </div>
+        <mat-nav-list class="uxg-nav-list">
+            <a mat-list-item #home (click)="navigateToHome()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Home'}">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <p>Home</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item #home (click)="navigateToFinancingDetails()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Financing Details'}">
+                <mat-icon mat-list-icon>attach_money</mat-icon>
+                <p>Financing Details</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item #personal (click)="navigateToPersonalInfo()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Personal Info'}">
+                <mat-icon mat-list-icon>face</mat-icon>
+                <p>Personal Info</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item #property (click)="navigateToPropertyInfo()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Property Info'}">
+                <mat-icon mat-list-icon>markunread_mailbox</mat-icon>
+                <p>Property Info</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item #loan (click)="navigateToLoanSelection()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Loan Selection'}">
+                <mat-icon mat-list-icon>room_preferences</mat-icon>
+                <p>Loan Selection</p>
+            </a>
+            <!-- <mat-divider></mat-divider>
+            <a mat-list-item #property (click)="navigateToLoanPreferences()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Loan Preferences'}">
+                <mat-icon mat-list-icon>room_preferences</mat-icon>
+                <p>Loan Preferences</p>
+            </a> -->
+            <mat-divider></mat-divider>
+            <a mat-list-item #asset (click)="navigateToAssetInfo()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Asset Info'}">
+                <mat-icon mat-list-icon>motorcycle</mat-icon>
+                <p>Asset Info</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item #expenses (click)="navigateToExpensesInfo()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Expenses Info'}">
+                <mat-icon mat-list-icon>money</mat-icon>
+                <p>Expenses Info</p>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item #income (click)="navigateToIncomeInfo()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Income Info'}">
+                <mat-icon mat-list-icon>account_balance_wallet</mat-icon>
+                <p>Income Info</p>
+            </a>
+            <mat-divider></mat-divider>
+
+
+            <!-- <a mat-list-item (click)="navigateToModelList()" [ngClass]="{'uxg-list-item-selected' : sublevel == 'Model List'}">
+                <mat-icon mat-list-icon>dashboard</mat-icon>
+                <p>Model List</p>
+            </a> -->
+
+        </mat-nav-list>
+        <mat-nav-list class="uxg-link-list">
+            <a mat-list-item>
+                <mat-icon mat-list-icon>help</mat-icon>
+                <p>Help</p>
+            </a>
+            <a mat-list-item>
+                <mat-icon mat-list-icon>power_settings_new</mat-icon>
+                <p>Sign out</p>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-toolbar [sublevel]="sublevel" (menuClick)="sidenav.toggle()"></app-toolbar>
+        <app-content></app-content>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

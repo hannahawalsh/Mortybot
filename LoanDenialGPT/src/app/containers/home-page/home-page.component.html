@@ -1,0 +1,109 @@
+<!-- <p></p>
+<mat-radio-group aria-label="">
+    <div>
+        <mat-radio-button value="1"></mat-radio-button>
+    </div>
+    <div>
+        <mat-radio-button value="2"></mat-radio-button>
+    </div>
+</mat-radio-group> -->
+
+<!-- <div>
+    <mat-radio-button value="4"></mat-radio-button>
+</div> -->
+
+
+
+<mat-grid-list cols="5" gutterSize="5" rowHeight="100">
+    <mat-grid-tile [colspan]="5" [rowspan]="1">
+        <div class="uxg-h4">Apply For a Loan</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="5" [rowspan]="6">
+        <mat-card>
+            <p>What can we help you with?</p>
+            <mat-radio-group aria-label="Select an option">
+                <div>
+                    <mat-radio-button value="1">Purchase - I'm purchasing a home and I have an accepted contract with a
+                        seller.
+                    </mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="2">Pre-Approval - I'm shopping for a home and I don't have an accepted
+                        contract
+                        with a
+                        seller.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="3">Refinance Existing Balance - I'd like to refinance the existing mortgage
+                        balance
+                        on
+                        my home.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="4">Refinance to Obtain Cash - I'd like to refinance my home and obtain cash
+                        at
+                        closing.
+                    </mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="5">Home Equity - I'd like to obtain an additional loan or line of credit on
+                        a home
+                        I
+                        already own.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="6">Construction - I'm looking for financing to build a new home.
+                    </mat-radio-button>
+                </div>
+            </mat-radio-group>
+
+            <br>
+
+            <p>Who will be applying for this loan?</p>
+            <mat-radio-group aria-label="">
+                <div>
+                    <mat-radio-button value="1">I will be applying individually.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="2">I will be applying jointly with my spouse.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="3">I will be applying jointly with another person.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="4">More than 2 people will be applying for this loan.</mat-radio-button>
+                </div>
+            </mat-radio-group>
+
+            <br>
+
+            <p>How will you use the home or property you are financing?</p>
+            <mat-radio-group aria-label="">
+                <div>
+                    <mat-radio-button value="1">I will live in this home most of the year.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="2">I will use this home as a vacation home.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="3">I will rent out this property for income.</mat-radio-button>
+                </div>
+                <div>
+                    <mat-radio-button value="4">The property is vacant land.</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </mat-card>
+    </mat-grid-tile>
+
+    <br>
+
+    <mat-grid-tile [colspan]="5" [rowspan]="1">
+        <div>
+            <button mat-flat-button color="primary" (click)="navigateToFinancingDetails()">
+                Next
+            </button>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>
