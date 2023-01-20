@@ -1,4 +1,5 @@
 # MortyBot
+A GPT-3 powered chat bot that has been fine tuned on Consumer Financial Protection Bureau question and answers. Provides users with simple explanations on common mortgage jargon and helps answer common complex questions.
 
 ## Requirements
 
@@ -25,14 +26,14 @@ pip install bs4
 Angular must be installed
 
 Open file LoanDenialGPT/src/app/services/openapi.service.ts
+Replace api key with your own api key from OpenAI
 
-replace api key with your own api key from OpenAI
-
-`cd LoanDenialGPT`
-`npm install`
-`ng serve`
-
-navigate to http://localhost:4200 in your browser
+```bash
+cd LoanDenialGPT
+npm install
+ng serve
+```
+Navigate to http://localhost:4200 in your browser
 
 ## How-to use the Chatbot notebook
 
