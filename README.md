@@ -38,5 +38,6 @@ Navigate to http://localhost:4200 in your browser
 ## How-to use the Chatbot notebook
 
 In this [Demo Notebook](https://github.com/hannahawalsh/MortyBot/blob/main/question_answer_with_embeddings.ipynb)
+
 Run all of the cells
 Can use the widget at the bottom to ask questions.
