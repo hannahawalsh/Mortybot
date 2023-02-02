@@ -1,0 +1,246 @@
+
+
+<mat-grid-list cols="1" gutterSize="5" rowHeight="50">
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
+        <div class="uxg-h3">Smart Matches</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <div class="uxg-body">
+            Please select the financial institution to which you would like to send your loan application.
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="18">
+        <div class="internal-grid">
+            <mat-grid-list cols="4" gutterSize="5" rowHeight="100">
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+
+                    <mat-card class="card">
+                        <div class="ribbon-purple"><span>Near you</span>
+                        </div>
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">Commonwealth Credit Union</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            <!-- <div><mat-checkbox></mat-checkbox></div>
+                            <div>Commonwealth Credit Union</div> -->
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/CommonwealthCU.png" width="100%" max-height="300px"
+                                (click)="openDialog(0)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <div class="ribbon-pink"><span>Best rate</span>
+                        </div>
+
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">Park Community Credit Union</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+
+                        </mat-card-title>
+                        <div class="image-container">
+                            <img src="assets/images/park_communiity_CU.jpg" width="100%" max-height="300px"
+                                (click)="openDialog(1)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <div class="ribbon-charcoal"><span>Lowest fees</span>
+                        </div>
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">L&N Federal Credit Union</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/L&N_FCU.png" width="100%" max-height="300px"
+                                (click)="openDialog(2)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">Community Financial Services Bank</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/CommunityFinancial.png" width="100%" max-height="300px"
+                                (click)="openDialog(3)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">Citizens Bank of Kentucky</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/CitizensBank.png" width="100%" max-height="300px"
+                                (click)="openDialog(4)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">FNB Bank</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/FNB_Bank_copy.png" width="100%" max-height="300px"
+                                (click)="openDialog(5)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">Independence Bank</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/independence.png" width="100%" max-height="300px"
+                                (click)="openDialog(6)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">First Kentucky Bank</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/FirstKentucky.png" width="100%" max-height="300px"
+                                (click)="openDialog(7)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">Wilson & Muir Bank & Trust Co</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/Wilson&Muir.png" width="100%" max-height="300px"
+                                (click)="openDialog(8)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="3">
+                    <mat-card class="card">
+                        <mat-card-title>
+                            <mat-grid-list cols="10" gutterSize="1" rowHeight="30">
+                                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                    <mat-checkbox></mat-checkbox>
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="9" [rowspan]="2">
+                                    <div class="card-title">Limestone Bank</div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </mat-card-title>
+
+                        <div class="image-container">
+                            <img src="assets/images/Limestone.jpg" width="100%" max-height="300px"
+                                (click)="openDialog(9)">
+                        </div>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <div>
+            <button mat-flat-button color="primary" (click)="submit()">
+                Submit
+            </button>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>

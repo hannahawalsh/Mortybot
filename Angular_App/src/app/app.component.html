@@ -1,0 +1,14 @@
+<nb-layout>
+  <nb-layout-column>
+    <app-sidenav style="width: 100%; height: 100%;"></app-sidenav>
+
+    <!-- This template displays the overlay content and is connected to the button -->
+    <ng-template style="z-index: 99;" cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+      <app-chat (foundMatches)="foundMatches($event)"></app-chat>
+    </ng-template>
+  </nb-layout-column>
+</nb-layout>
+
+<button mat-fab ngClass="fab" color="gradient" (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <mat-icon>help</mat-icon>
+</button>

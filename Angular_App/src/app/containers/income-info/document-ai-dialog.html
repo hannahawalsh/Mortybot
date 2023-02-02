@@ -1,0 +1,52 @@
+<div *ngIf="!dataLoaded" style="margin:auto; width: 15%;">
+    <mat-spinner></mat-spinner>
+</div>
+
+<!-- <div *ngIf="predictions" style="height: 500px; overflow-y: scroll;">
+    <div *ngFor="let prediction of predictions.entities">
+        <p class="uxg-subtitle-2">{{prediction.name}}</p>
+        <p class="uxg-subtitle-3">{{prediction.confidence}}</p>
+        <p class="uxg-body-2">{{prediction.value}}</p>
+    </div>
+</div> -->
+
+<div *ngIf="predictions">
+    <div class="uxg-h4">Validation</div>
+    <table mat-table matSort [dataSource]="dataSource" summary="table of APIs">
+        <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+        <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element; let i = index">
+                <div *ngIf="element['UserValue'] != element['SuggestedValue']">
+                    <button mat-flat-button color="primary" (click)="useSuggestion(element)">
+                        Use Suggestion
+                    </button>
+                </div>
+            </td>
+        </ng-container>
+
+        <!-- API Column -->
+        <mat-text-column name="FieldName"></mat-text-column>
+
+        <!-- End Point Column -->
+        <mat-text-column name="UserValue"></mat-text-column>
+
+        <!-- Day of Week Column -->
+        <mat-text-column name="SuggestedValue"></mat-text-column>
+
+
+        <!-- Date Time Column
+        <ng-container matColumnDef="DateTime">
+          <th mat-header-cell *matHeaderCellDef scope="column">Date Time</th>
+          <td mat-cell *matCellDef="let element">{{ element.DateTime }}</td>
+        </ng-container> -->
+
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+</div>

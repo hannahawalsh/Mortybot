@@ -1,0 +1,80 @@
+<mat-grid-list cols="12" gutterSize="0" rowHeight="30">
+
+    <mat-grid-tile [colspan]="1" [rowspan]="13">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="11" [rowspan]="13">
+        <mat-card>
+            <h3 class="uxg-h3">10 Year Fixed</h3>
+            <div class="scroll">
+                <table mat-table matSort [dataSource]="dataSource">
+
+                    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+
+                    <mat-text-column name="Rate"></mat-text-column>
+                    <mat-text-column name="APR"></mat-text-column>
+
+                    <mat-text-column name="Points"></mat-text-column>
+                    <mat-text-column name="Closing Fees"></mat-text-column>
+                    <mat-text-column name="Payment"></mat-text-column>
+
+                    <ng-container matColumnDef="Buttons">
+                        <th mat-header-cell *matHeaderCellDef>Actions</th>
+                        <td mat-cell *matCellDef="let element; let i = index">
+                            <button mat-flat-button color="primary" (click)="navigateToAssetInfo()">
+                                Select
+                            </button>
+                        </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+        </mat-card>
+
+    </mat-grid-tile>
+
+    <br>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="13">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="11" [rowspan]="13">
+        <mat-card>
+            <h3 class="uxg-h3">5 Year Adjustable Rate</h3>
+            <div class="scroll">
+                <table mat-table matSort [dataSource]="dataSource2">
+
+                    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+
+                    <mat-text-column name="Rate"></mat-text-column>
+                    <mat-text-column name="APR"></mat-text-column>
+
+                    <mat-text-column name="Points"></mat-text-column>
+                    <mat-text-column name="Closing Fees"></mat-text-column>
+                    <mat-text-column name="Payment"></mat-text-column>
+
+                    <ng-container matColumnDef="Buttons">
+                        <th mat-header-cell *matHeaderCellDef>Actions</th>
+                        <td mat-cell *matCellDef="let element; let i = index">
+                            <button mat-flat-button color="primary" (click)="navigateToAssetInfo()">
+                                Select
+                            </button>
+                        </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+        </mat-card>
+    </mat-grid-tile>
+
+</mat-grid-list>

@@ -1,0 +1,72 @@
+<mat-toolbar class="uxg-toolbar uxg-toolbar-elevated">
+	<button mat-icon-button class="uxg-toolbar-menu" (click)="toggleNav()">
+		<mat-icon>menu</mat-icon>
+	</button>
+	<div class="uxg-logo" dense></div>
+	<ul class="uxg-breadcrumb uxg-breadcrumb-responsive">
+		<button mat-icon-button color="accent" class="uxg-breadcrumb-back">
+			<!-- <mat-icon>chevron_left</mat-icon> -->
+		</button>
+		<li class="uxg-h6">Loan Application</li>
+		<li>{{sublevel}}</li>
+	</ul>
+	<!-- <ul class="uxg-breadcrumb uxg-breadcrumb-responsive">
+		<button mat-icon-button color="accent" class="uxg-breadcrumb-back">
+      		<mat-icon>chevron_left</mat-icon>
+    	</button>
+		<li class="uxg-h6">PRODUCT NAME</li>
+		<li>Level</li>
+		<li>Sub-level</li>
+	</ul> -->
+	<span class="fill-remaining-space"></span>
+	<div class="uxg-toolbar-actions">
+		<!-- <button mat-icon-button>
+			<mat-icon>search</mat-icon>
+		</button> -->
+		<button mat-icon-button>
+			<mat-icon>notifications</mat-icon>
+		</button>
+		<!-- <button mat-icon-button>
+			<mat-icon (click)="onSearchClick()">help_outline</mat-icon>
+		</button>
+		<button mat-icon-button>
+			<mat-icon (click)="toggleDrawer()">help_outline</mat-icon>
+		</button> -->
+		<!-- <button mat-icon-button>
+			<mat-icon (click)="toggleQuestionField()">help_outline</mat-icon>
+		</button> -->
+		<button mat-icon-button (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+			<mat-icon>help_outline</mat-icon>
+		</button>
+		
+		<button mat-icon-button>
+			<mat-icon>apps</mat-icon>
+		</button>
+	</div>
+	<button mat-icon-button [matMenuTriggerFor]="menuHero">
+		<mat-icon>account_circle</mat-icon>
+	</button>
+	<button mat-icon-button class="uxg-toolbar-icon-menu">
+		<mat-icon>more_vert</mat-icon>
+	</button>
+</mat-toolbar>
+
+<mat-menu #menuHero="matMenu" class="uxg-user-profile">
+	<div class="uxg-menu-header">
+		<div class="uxg-avatar-hero-block">
+			<div class="uxg-avatar" large>RH</div>
+			<h6 class="uxg-h6">Raya Hristova</h6>
+			<span class="uxg-caption">raya.hristova@finastra.com</span>
+		</div>
+	</div>
+	<mat-divider></mat-divider>
+	<div class="uxg-menu-footer">
+		<button mat-flat-button color="primary" dense>
+			<mat-icon>exit_to_app</mat-icon>
+			Logout
+		</button>
+		<button mat-button color="primary" dense>
+			View profile
+		</button>
+	</div>
+</mat-menu>
